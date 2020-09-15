@@ -15,8 +15,6 @@
   const dbRefObject = firebase.database().ref().child('Aerodromes');
   const dbRefList = dbRefObject.child('Aerodromes');
 
-
-  //var database = firebase.database();
   dbRefObject.on('value', snap => {
       preObject.innerText = JSON.stringify(snap.val(),null,3);
       data = snap.val();
