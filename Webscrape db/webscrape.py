@@ -191,9 +191,11 @@ def format_coor (coor):
     except:
         return 'no coor or error'
 
-Aerodromes = {}
+db = {}
+db["Aerodromes"] = {}
+
 for i in range(0,len(icao)):
-    Aerodromes[icao[i]] = {}
+    db["Aerodromes"][icao[i]] = {}
 for i in range(0,len(icao)):
     data = {}
     data['name'] = name[i]
@@ -205,15 +207,15 @@ for i in range(0,len(icao)):
     data['type'] = type_ad[i]
 
     print(data)
-    Aerodromes[icao[i]] = data
-print(Aerodromes)
+    db["Aerodromes"][icao[i]] = data
+print(db)
 
 
 
-Aerodromes_json = json.dumps(Aerodromes)
-print(Aerodromes_json)
+db_json = json.dumps(db)
+print(db_json)
 
 with open('data.json', 'w') as f:
-    json.dump(Aerodromes, f)
+    json.dump(db, f)
 
 print('done')

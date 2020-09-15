@@ -1,11 +1,21 @@
+import json
 
-coor = "N504422 E0032910"
+icao = ['EBBR','EBAW']
+name = ['Brussels','Antwerp']
+db = {}
+db["Aerodromes"] = {}
+for i in range(0,len(icao)):
+    db["Aerodromes"][icao[i]] = {}
+for i in range(0,len(icao)):
+    data = {}
+    data['name'] = name[i]
+    data['icao'] = icao[i]
+
+    db[icao[i]] = data
+print(db)
 
 
-def format_coor (coor):
-    data1 = coor[1:7]
-    data2 = coor[9:16]
-    print(data1)
-    return data1+coor[0] + data2 + coor[8]
 
-print(format_coor(coor))
+Aerodromes_json = json.dumps(db)
+
+print('done')

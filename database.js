@@ -12,27 +12,39 @@
   const preObject = document.getElementById('object');
   const ulList = document.getElementById('list');
   // Get a reference to the database service
-  const dbRefObject = firebase.database().ref().child('object');
+  const dbRefObject = firebase.database().ref().child('Aerodromes');
   const dbRefList = dbRefObject.child('Aerodromes');
-  
 
 
-  
-
-  // var database = firebase.database();
+  //var database = firebase.database();
   dbRefObject.on('value', snap => {
       preObject.innerText = JSON.stringify(snap.val(),null,3);
       data = snap.val();
-      console.log(data.Aerodromes);
-      var ad = [];
-      var data3 = [];
-      for (i in data.Aerodromes){
-        data3 = data.Aerodromes[i];
-          ad.push(data3.name);
+      console.log('aaaaa',data);
+      var ad_name = [];
+      var icao = [];
+      var iata = [];
+      var coor = [];
+      var elev = [];
+      var type = [];
+      var country = [];
+      var data2 = [];
+
+      for (i in data){
+        data2 = data[i];
+        ad_name.push(data2.name);
+        icao.push(data2.icao)
+        iata.push(data2.iata)
+        elev.push(data2.elevation)
+        country.push(data2.country)
+        type.push(data2.type)
+        coor.push(data2.coor)
       }
-      console.log(ad);
+      console.log('ad',ad_name);
+      console.log('coor',coor);
  
   });
+
   dbRefList.on('child_added', snap => {
       const li = document.createElement('li');
       li.innerText = snap.val();
