@@ -1,0 +1,6 @@
+- 3 lijsten drop down search
+
+1 gewone simpele lijst (a) 
+	- button aan gekoppeld om uit (a) naar een nieuwe simpele lijst (b) te copieren
+button om items uit (b) te getten
+
