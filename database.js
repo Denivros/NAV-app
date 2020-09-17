@@ -4,10 +4,16 @@
   const config = {
     apiKey: "AIzaSyAEt3og515ZuYlivFWjrY00_rsgFLdXCuA",
     authDomain: "nav-one-b8410.firebaseapp.com",
-    databaseURL: "https://nav-one-b8410.firebaseio.com/",
-    storageBucket: "nav-one-b8410.appspot.com"
+    databaseURL: "https://nav-one-b8410.firebaseio.com",
+    projectId: "nav-one-b8410",
+    storageBucket: "nav-one-b8410.appspot.com",
+    messagingSenderId: "1068648920424",
+    appId: "1:1068648920424:web:4619d8376aa0eadc7692dd",
+    measurementId: "G-00X6NKNK5N"
   };
   firebase.initializeApp(config);
+  firebase.analytics();
+
 
   const preObject = document.getElementById('object');
   const ulList = document.getElementById('list');

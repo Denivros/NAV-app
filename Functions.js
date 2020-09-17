@@ -155,8 +155,6 @@ function format_time(time) {
     return min + ":" + sec.toString()
 }
 
-
-
 function time_sum(time1,time2){
     var min1 = ''
     var min2 = ''
@@ -183,15 +181,55 @@ function time_sum(time1,time2){
     return min + ":" + sec
 }
 
-var coor1 = '510714N0041308E'; // depinte
-var coor2 = '505900N0034000E'; //tango
-var coor2 = '505428N0040820E'; // AFI
-var wpt1 = new Waypoint('DEPINTE',coor1);
-var wpt2 = new Waypoint('TANGO',coor2);
-console.log('dist',distance_nm(wpt1,wpt2))
-console.log('hdg',bearing(wpt1,wpt2))
-console.log(wind_triangle(100,"020/10",193));
-console.log(wind_triangle(100,"020/10",259));
-console.log('time',time_calc(13,110));
-console.log('timeformat',format_time(time_calc(13,110)));
-console.log('time sum',time_sum(format_time(time_calc(13,110)),"07:55"))
+// ----------------------------------- FUEL CALC ---------------------------------
+function fuel_calc_leg(dist,gs,ff) {
+    var time = 0
+    var fuel = 0
+    time = dist/gs;
+    fuel = time * ff;
+    return fuel
+}
+
+function fuel_calc_trip (fuel_altn,fuel_taxi,fuel_appr,fuel_descent,fuel_final_reserve,fuel_cruise,fuel_to,fuel_climb){
+    var fuel_trip
+    fuel_trip = fuel_to,fuel_climb,fuel_cruise,fuel_descent,fuel_appr;
+    return fuel_trip
+}
+
+function fuel_calc_cont (fuel_trip){
+    var fuel_cont
+    fuel_cont = fuel_trip * 0.05;
+    return Math.round(fuel_cont)
+}
+
+function fuel_calc_min_req(fuel_trip,fuel_altn,fuel_final_reserve,fuel_add,fuel_cont){
+    return fuel_trip + fuel_altn + fuel_final_reserve + fuel_add + fuel_cont
+}
+function fuel_calc_extra(fuel_start,fuel_calc_min_req){
+    return fuel_start - fuel_calc_min_req
+}
+
+
+
+// var coor1 = '510714N0041308E'; // depinte
+// var coor2 = '505900N0034000E'; //tango
+// var coor2 = '505428N0040820E'; // AFI
+// var wpt1 = new Waypoint('DEPINTE',coor1);
+// var wpt2 = new Waypoint('TANGO',coor2);
+// console.log('dist',distance_nm(wpt1,wpt2))
+// console.log('hdg',bearing(wpt1,wpt2))
+// //console.log(wind_triangle(100,"020/10",193));
+// console.log(wind_triangle(100,"020/10",259));
+// console.log('time',time_calc(13,110));
+// console.log('timeformat',format_time(time_calc(13,110)));
+// console.log('time sum',time_sum(format_time(time_calc(13,110)),"07:55"))
+
+
+// var wind = ""
+// wind = "150/15";
+// var course = []
+// course = [45,90,135,180,225,270,315,360];
+// var i
+// for (i=0 ; i < course.length;i++){
+//     console.log(wind_triangle(100,wind,course[i]));
+// }
