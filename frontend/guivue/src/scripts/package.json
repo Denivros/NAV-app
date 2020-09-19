@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^7.21.0",
-    "@turf/turf": "^5.1.6"
+    "firebase": "^7.21.0"
   }
 }

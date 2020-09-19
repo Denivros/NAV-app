@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "@turf/turf": "^5.1.6",
-    "firebase": "^7.21.0",
-    "vue": "^2.6.12"
+    "firebase": "^7.21.0"
   },
   "devDependencies": {},
   "scripts": {
