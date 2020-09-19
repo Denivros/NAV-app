@@ -51,7 +51,7 @@
             <v-select v-model="select2" :items="selectionArrival" label="Arrival" dense outlined></v-select>
           
           
-            <v-select v-model="select3" :items="selectionTussen" label="Tussen" dense outlined></v-select>
+            <v-select v-model="select3" :items="selectionAlternate" label="Alternate" dense outlined></v-select>
 
             <v-btn v-on:click="sendAerodromes" rounded color="deep-purple accent-4" >SET</v-btn>
           
@@ -71,7 +71,7 @@
 
         </v-row>
         <v-row>
-          <v-select  :items="selectionResult" label="Tussen" dense outlined></v-select>
+          <v-select  :items="selectionResult" label="Alternate" dense outlined></v-select>
         </v-row>
       </v-container>
     </v-main>
@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import icao from "./scripts/index.js";
+import {db} from "./scripts/index.js";
 
 export default {
   props: {
@@ -96,9 +96,9 @@ export default {
     select2: '',
     select3: '',
     
-    selectionDeparture: ["select1", "optie2", "hello"],
-    selectionArrival: ["select1", "optie2", "hello"],
-    selectionTussen: ["select1", "optie2", "hello"],
+    selectionDeparture: [],
+    selectionArrival: [],
+    selectionAlternate: [],
     selectionResult: []
   }),
   methods: {
@@ -108,12 +108,40 @@ export default {
       this.selectionResult.push(this.select3);
 
     },
-    
+    test: function(){
+      const dbRefObject = db.ref().child('Aerodromes');
+      var ad_name = [];
+      var icao = [];
+      var iata = [];
+      var coor = [];
+      var elev = [];
+      var type = [];
+      var country = [];
+      var data2 = [];
+      dbRefObject.on('value',snap => {
+        var data = snap.val()
+        for (var i in data){
+          data2 = data[i];
+          ad_name.push(data2.name);
+          icao.push(data2.icao);
+          iata.push(data2.iata);
+          elev.push(data2.elevation);
+          country.push(data2.country);
+          type.push(data2.type);
+          coor.push(data2.coor);
+          }
+        // console.log(icao)
+        this.selectionDeparture = icao;
+        this.selectionArrival = icao;
+        this.selectionAlternate = icao;
+      });
+
+    }    
   },
   
   created() {
     this.$vuetify.theme.dark = true;
-    console.log(icao);
+    this.test();
   },
 };
 </script>
