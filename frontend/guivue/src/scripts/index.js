@@ -1,5 +1,5 @@
-import firebase from "/guivue/node_modules/firebase";
-import "firebase/firestore";
+ import firebase from "firebase/app";
+ import "firebase/database";
 
 firebase.initializeApp({
   apiKey: "AIzaSyAEt3og515ZuYlivFWjrY00_rsgFLdXCuA",

@@ -83,7 +83,7 @@
 </template>
 
 <script>
- import icao from "./scripts/index.js";
+// import icao from "./scripts/index.js";
 
 export default {
   props: {
@@ -96,7 +96,7 @@ export default {
     select2: '',
     select3: '',
     
-    selectionDeparture: icao,
+    selectionDeparture: ["select1", "optie2", "hello"],
     selectionArrival: ["select1", "optie2", "hello"],
     selectionTussen: ["select1", "optie2", "hello"],
     selectionResult: []
@@ -109,12 +109,13 @@ export default {
 
     },
     newmethod: function(){
-
+      // console.log(require('./scripts/index.js'));
     }
   },
   
   created() {
     this.$vuetify.theme.dark = true;
+    this.newmethod();
   },
 };
 </script>
