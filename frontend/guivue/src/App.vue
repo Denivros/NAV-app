@@ -83,7 +83,7 @@
 </template>
 
 <script>
-
+// import fire from "./scripts/index.js";
 
 export default {
   props: {
