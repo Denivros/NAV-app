@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from "/guivue/node_modules/firebase";
 import "firebase/firestore";
 
 var fire = firebase.initializeApp({
@@ -67,4 +67,4 @@ export default fire;
 //   liToRemove.remove();
 // });
 
-// export default icao;
+// // export default icao;
