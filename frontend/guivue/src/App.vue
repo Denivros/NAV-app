@@ -108,7 +108,7 @@ export default {
       this.selectionResult.push(this.select3);
 
     },
-    test: function(){
+    getAerodromes: function(){
       const dbRefObject = db.ref().child('Aerodromes');
       var ad_name = [];
       var icao = [];
@@ -135,13 +135,35 @@ export default {
         this.selectionArrival = icao;
         this.selectionAlternate = icao;
       });
+    },
+    getWaypoints: function(){
+      const dbRefObject = db.ref().child('Waypoints');
+      var name = [];
+      var to_ad_icao = [];
+      var coor = [];
+      var country = [];
+      var data2 = [];
 
+      dbRefObject.on('value',snap => {
+        var data = snap.val()
+        for (var i in data){
+          data2 = data[i];
+          name.push(data2.name);
+          to_ad_icao.push(data2.to_ad_icao);
+          country.push(data2.country);
+          coor.push(data2.coor);
+          }
+        console.log(name)
+        //this.selectionWaypoints = name;
+
+      });
     }    
   },
   
   created() {
     this.$vuetify.theme.dark = true;
-    this.test();
+    this.getAerodromes();
+    this.getWaypoints();
   },
 };
 </script>

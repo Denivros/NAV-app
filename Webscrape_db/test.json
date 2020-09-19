@@ -1,0 +1,643 @@
+{
+    "Aerodromes": {
+      "_02994": {
+        "name": "Chimay-Virelles Ulmodrome",
+        "icao": "_02994",
+        "coor": "500704N0041950E",
+        "country": "Belgium",
+        "elevation": "919",
+        "iata": "",
+        "type": "Closed"
+      },
+      "_04478": {
+        "name": "Froidchapelle Glider Field",
+        "icao": "_04478",
+        "coor": "501035N0042108E",
+        "country": "Belgium",
+        "elevation": "902",
+        "iata": "",
+        "type": "Closed"
+      },
+      "_05609": {
+        "name": "Imelda Hospital Helipad",
+        "icao": "_05609",
+        "coor": "510104N0043329E",
+        "country": "Belgium",
+        "elevation": "30",
+        "iata": "",
+        "type": "Closed"
+      },
+      "_11162": {
+        "name": "Sovet Airfield",
+        "icao": "_11162",
+        "coor": "501712N0050225E",
+        "country": "Belgium",
+        "elevation": "919",
+        "iata": "",
+        "type": "Airport"
+      },
+      "_12872": {
+        "name": "Zomergem Heliport",
+        "icao": "_12872",
+        "coor": "510753N0033120E",
+        "country": "Belgium",
+        "elevation": "66",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBAM": {
+        "name": "Amougies Airfield",
+        "icao": "EBAM",
+        "coor": "504422N0032910E",
+        "country": "Belgium",
+        "elevation": "49",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBAR": {
+        "name": "Arlon-Sterpenich Aerodrome",
+        "icao": "EBAR",
+        "coor": "493946N0055313E",
+        "country": "Belgium",
+        "elevation": "1 140",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBAV": {
+        "name": "Avernas-le-Bauduin Airport",
+        "icao": "EBAV",
+        "coor": "504226N0050410E",
+        "country": "Belgium",
+        "elevation": "394",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBAW": {
+        "name": "Antwerp International Airport",
+        "icao": "EBAW",
+        "coor": "511122N0042737E",
+        "country": "Belgium",
+        "elevation": "39",
+        "iata": "ANR",
+        "type": "Airport"
+      },
+      "EBBA": {
+        "name": "Baudour Heliport",
+        "icao": "EBBA",
+        "coor": "502810N0035020E",
+        "country": "Belgium",
+        "elevation": "98",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBBE": {
+        "name": "Beauvechain Air Base",
+        "icao": "EBBE",
+        "coor": "504531N0044606E",
+        "country": "Belgium",
+        "elevation": "341",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBBG": {
+        "name": "Bastogne Michamps Ulmodrome",
+        "icao": "EBBG",
+        "coor": "500305N0054750E",
+        "country": "Belgium",
+        "elevation": "1 770",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBBL": {
+        "name": "Kleine Brogel Air Base",
+        "icao": "EBBL",
+        "coor": "511009N0052814E",
+        "country": "Belgium",
+        "elevation": "200",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBBN": {
+        "name": "Büllingen Airfield",
+        "icao": "EBBN",
+        "coor": "502454N0061635E",
+        "country": "Belgium",
+        "elevation": "2 067",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBBO": {
+        "name": "Mogimont Airport",
+        "icao": "EBBO",
+        "coor": "495200N0050406E",
+        "country": "Belgium",
+        "elevation": "1 394",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBBR": {
+        "name": "Brussels Airport",
+        "icao": "EBBR",
+        "coor": "505405N0042904E",
+        "country": "Belgium",
+        "elevation": "184",
+        "iata": "BRU",
+        "type": "Large airport"
+      },
+      "EBBT": {
+        "name": "Brasschaat Airfield",
+        "icao": "EBBT",
+        "coor": "512041N0043009E",
+        "country": "Belgium",
+        "elevation": "75",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBBW": {
+        "name": "Wonck Airport",
+        "icao": "EBBW",
+        "coor": "504635N0053646E",
+        "country": "Belgium",
+        "elevation": "367",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBBX": {
+        "name": "Jehonville Air Base",
+        "icao": "EBBX",
+        "coor": "495330N0051325E",
+        "country": "Belgium",
+        "elevation": "105",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBCF": {
+        "name": "Cerfontaine Airport",
+        "icao": "EBCF",
+        "coor": "500910N0042312E",
+        "country": "Belgium",
+        "elevation": "961",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBCH": {
+        "name": "Shape Pad Heliport",
+        "icao": "EBCH",
+        "coor": "503011N0035857E",
+        "country": "Belgium",
+        "elevation": "289",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBCI": {
+        "name": "Brussels South Charleroi Airport",
+        "icao": "EBCI",
+        "coor": "502736N0042710E",
+        "country": "Belgium",
+        "elevation": "614",
+        "iata": "CRL",
+        "type": "Large airport"
+      },
+      "EBCV": {
+        "name": "Chievres Ab",
+        "icao": "EBCV",
+        "coor": "503433N0034951E",
+        "country": "Belgium",
+        "elevation": "200",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBDI": {
+        "name": "Diksmuide Heliport",
+        "icao": "EBDI",
+        "coor": "510104N0025125E",
+        "country": "Belgium",
+        "elevation": "23",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBFN": {
+        "name": "Koksijde Air Base",
+        "icao": "EBFN",
+        "coor": "505725N0023910E",
+        "country": "Belgium",
+        "elevation": "20",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBFS": {
+        "name": "Florennes Air Base",
+        "icao": "EBFS",
+        "coor": "501437N0043855E",
+        "country": "Belgium",
+        "elevation": "935",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBGB": {
+        "name": "Grimbergen Airfield",
+        "icao": "EBGB",
+        "coor": "505658N0042336E",
+        "country": "Belgium",
+        "elevation": "69",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBGG": {
+        "name": "Overboelare Airfield",
+        "icao": "EBGG",
+        "coor": "504517N0035147E",
+        "country": "Belgium",
+        "elevation": "65",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBGL": {
+        "name": "Glons",
+        "icao": "EBGL",
+        "coor": "no coor or error",
+        "country": "Belgium",
+        "elevation": "",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBGT": {
+        "name": "Ghent/Industry Zone Heliport",
+        "icao": "EBGT",
+        "coor": "510114N0034349E",
+        "country": "Belgium",
+        "elevation": "43",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBHE": {
+        "name": "Couthuin Airport",
+        "icao": "EBHE",
+        "coor": "503216N0050626E",
+        "country": "Belgium",
+        "elevation": "607",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBHN": {
+        "name": "Hoevenen Airfield",
+        "icao": "EBHN",
+        "coor": "511819N0042326E",
+        "country": "Belgium",
+        "elevation": "10",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBIS": {
+        "name": "Ath/Isieres Airport",
+        "icao": "EBIS",
+        "coor": "503949N0034817E",
+        "country": "Belgium",
+        "elevation": "95",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBKH": {
+        "name": "Balen-Keiheuvel Aerodrome",
+        "icao": "EBKH",
+        "coor": "511045N0051320E",
+        "country": "Belgium",
+        "elevation": "131",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBKT": {
+        "name": "Flanders International Airport",
+        "icao": "EBKT",
+        "coor": "504902N0031217E",
+        "country": "Belgium",
+        "elevation": "64",
+        "iata": "KJK",
+        "type": "Airport"
+      },
+      "EBKU": {
+        "name": "Kuurne Heliport",
+        "icao": "EBKU",
+        "coor": "505131N0031520E",
+        "country": "Belgium",
+        "elevation": "49",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBKW": {
+        "name": "Knokke-Heist/Westkapelle Heliport",
+        "icao": "EBKW",
+        "coor": "511918N0031740E",
+        "country": "Belgium",
+        "elevation": "7",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBLB": {
+        "name": "Elsenborn-Butgenbach Air Base",
+        "icao": "EBLB",
+        "coor": "502905N0061059E",
+        "country": "Belgium",
+        "elevation": "1 870",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBLE": {
+        "name": "Aero Club Sanicole vzw",
+        "icao": "EBLE",
+        "coor": "510710N0051802E",
+        "country": "Belgium",
+        "elevation": "207",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBLG": {
+        "name": "Liège Airport",
+        "icao": "EBLG",
+        "coor": "503815N0052636E",
+        "country": "Belgium",
+        "elevation": "659",
+        "iata": "LGG",
+        "type": "Airport"
+      },
+      "EBLN": {
+        "name": "Liernu Airport",
+        "icao": "EBLN",
+        "coor": "503446N0044730E",
+        "country": "Belgium",
+        "elevation": "564",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBLR": {
+        "name": "Reninge Heliport",
+        "icao": "EBLR",
+        "coor": "505606N0024528E",
+        "country": "Belgium",
+        "elevation": "16",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBLZ": {
+        "name": "Zaffelare Heliport",
+        "icao": "EBLZ",
+        "coor": "510749N0035151E",
+        "country": "Belgium",
+        "elevation": "10",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBMB": {
+        "name": "Melsbroek Air Base",
+        "icao": "EBMB",
+        "coor": "505405N0042904E",
+        "country": "Belgium",
+        "elevation": "184",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBML": {
+        "name": "Maillen Airport",
+        "icao": "EBML",
+        "coor": "502230N0045535E",
+        "country": "Belgium",
+        "elevation": "886",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBMO": {
+        "name": "Moorsele Airfield",
+        "icao": "EBMO",
+        "coor": "505110N0030850E",
+        "country": "Belgium",
+        "elevation": "66",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBMT": {
+        "name": "Munte",
+        "icao": "EBMT",
+        "coor": "no coor or error",
+        "country": "Belgium",
+        "elevation": "",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBNM": {
+        "name": "Namur-Suarlee Airport",
+        "icao": "EBNM",
+        "coor": "502922N0044611E",
+        "country": "Belgium",
+        "elevation": "594",
+        "iata": "QNM",
+        "type": "Airport"
+      },
+      "EBOR": {
+        "name": "Orchimont Airport",
+        "icao": "EBOR",
+        "coor": "495423N0045603E",
+        "country": "Belgium",
+        "elevation": "1 312",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBOS": {
+        "name": "Ostend-Bruges International Airport",
+        "icao": "EBOS",
+        "coor": "511159N0025149E",
+        "country": "Belgium",
+        "elevation": "13",
+        "iata": "OST",
+        "type": "Airport"
+      },
+      "EBSG": {
+        "name": "Saint-Ghislain Airport",
+        "icao": "EBSG",
+        "coor": "502730N0034920E",
+        "country": "Belgium",
+        "elevation": "21",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBSH": {
+        "name": "Saint-Hubert Airport (Belgium)",
+        "icao": "EBSH",
+        "coor": "500214N0052415E",
+        "country": "Belgium",
+        "elevation": "1 853",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBSL": {
+        "name": "Zutendaal Air Base",
+        "icao": "EBSL",
+        "coor": "505700N0053538E",
+        "country": "Belgium",
+        "elevation": "312",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBSP": {
+        "name": "Spa-La Sauvenière Airport",
+        "icao": "EBSP",
+        "coor": "502900N0055500E",
+        "country": "Belgium",
+        "elevation": "1 581",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBSS": {
+        "name": "Sint-Lucas Hospital Heliport",
+        "icao": "EBSS",
+        "coor": "511102N0031500E",
+        "country": "Belgium",
+        "elevation": "10",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBST": {
+        "name": "Sint-Truiden Air Base",
+        "icao": "EBST",
+        "coor": "504731N0051206E",
+        "country": "Belgium",
+        "elevation": "245",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBSU": {
+        "name": "Saint-Hubert Air Base",
+        "icao": "EBSU",
+        "coor": "500200N0052617E",
+        "country": "Belgium",
+        "elevation": "1 930",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBSZ": {
+        "name": "Semmerzake",
+        "icao": "EBSZ",
+        "coor": "no coor or error",
+        "country": "Belgium",
+        "elevation": "",
+        "iata": "",
+        "type": ""
+      },
+      "EBTN": {
+        "name": "Goetsenhoven Military Airfield",
+        "icao": "EBTN",
+        "coor": "504654N0045728E",
+        "country": "Belgium",
+        "elevation": "247",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBTX": {
+        "name": "Verviers-Theux Airfield",
+        "icao": "EBTX",
+        "coor": "503304N0055114E",
+        "country": "Belgium",
+        "elevation": "1 102",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBTY": {
+        "name": "Maubray Airport",
+        "icao": "EBTY",
+        "coor": "503154N0032946E",
+        "country": "Belgium",
+        "elevation": "157",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBUL": {
+        "name": "Ursel Air Base",
+        "icao": "EBUL",
+        "coor": "510839N0032827E",
+        "country": "Belgium",
+        "elevation": "98",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBVE": {
+        "name": "Oeren Heliport",
+        "icao": "EBVE",
+        "coor": "510121N0024049E",
+        "country": "Belgium",
+        "elevation": "3",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBVS": {
+        "name": "Veurne/Sint-Augustinus Heliport",
+        "icao": "EBVS",
+        "coor": "510344N0024010E",
+        "country": "Belgium",
+        "elevation": "20",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBWE": {
+        "name": "Weelde Air Base",
+        "icao": "EBWE",
+        "coor": "512334N0045849E",
+        "country": "Belgium",
+        "elevation": "105",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBZH": {
+        "name": "Kiewit airfield",
+        "icao": "EBZH",
+        "coor": "505813N0052230E",
+        "country": "Belgium",
+        "elevation": "137",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBZI": {
+        "name": "Zingem Heliport",
+        "icao": "EBZI",
+        "coor": "505531N0033657E",
+        "country": "Belgium",
+        "elevation": "30",
+        "iata": "",
+        "type": "Heliport"
+      },
+      "EBZM": {
+        "name": "Oomberg Airport",
+        "icao": "EBZM",
+        "coor": "505433N0034929E",
+        "country": "Belgium",
+        "elevation": "249",
+        "iata": "",
+        "type": "Closed"
+      },
+      "EBZR": {
+        "name": "Oostmalle Airfield",
+        "icao": "EBZR",
+        "coor": "511553N0044512E",
+        "country": "Belgium",
+        "elevation": "53",
+        "iata": "OBL",
+        "type": "Airport"
+      },
+      "EBZU": {
+        "name": "Zuienkerke Airfield",
+        "icao": "EBZU",
+        "coor": "511520N0030824E",
+        "country": "Belgium",
+        "elevation": "3",
+        "iata": "",
+        "type": "Airport"
+      },
+      "EBZW": {
+        "name": "Zwartberg Airfield",
+        "icao": "EBZW",
+        "coor": "510055N0053133E",
+        "country": "Belgium",
+        "elevation": "289",
+        "iata": "GNK",
+        "type": "Airport"
+      }
+    }
+  }
