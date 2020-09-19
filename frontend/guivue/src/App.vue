@@ -30,21 +30,46 @@
     <!-- Dit is de body van de app -->
     <v-main>
       <v-container class="fill-height" fluid>
-        <v-row>
-          <v-col cols="1">
-            <v-select :items="selection2" label="Departure" dense outlined></v-select>
-          </v-col>
-          <v-col cols="1">
-            <v-select :items="selection2" label="Arrival" dense outlined></v-select>
-          </v-col>
-          <v-col cols="1">
-            <v-select :items="selection2" label="Tussen" dense outlined></v-select>
-          </v-col>
-          
-        </v-row>
+        
 
         <!-- row 2 --------------------------------------------------------------------------------------------------------- -->
-        <v-row></v-row>
+        <v-row>
+          <v-col cols="4">
+            <v-card
+    class="mx-auto"
+    max-width="300"
+    outlined
+  >
+    <v-list-item>
+      <v-list-item-content>
+        
+        <v-list-item-title class="headline mb-5">Aerodromes</v-list-item-title>
+         
+            <v-select v-model="select1" :items="selectionDeparture" label="Departure" dense outlined></v-select>
+          
+          
+            <v-select v-model="select2" :items="selectionArrival" label="Arrival" dense outlined></v-select>
+          
+          
+            <v-select v-model="select3" :items="selectionTussen" label="Tussen" dense outlined></v-select>
+
+            <v-btn v-on:click="sendAerodromes" rounded color="deep-purple accent-4" >SET</v-btn>
+          
+      </v-list-item-content>
+
+      
+    </v-list-item>
+
+    
+      
+    
+  
+      
+    
+  </v-card>
+          </v-col>
+
+        </v-row>
         <v-row></v-row>
       </v-container>
     </v-main>
@@ -56,32 +81,33 @@
 </template>
 
 <script>
+
+
 export default {
   props: {
     source: String,
   },
   data: () => ({
     drawer: null,
-    items: {
-      A: { text: "jello" },
-      B: { text: "thomas" },
-      C: { text: "thomas" },
-      D: { text: "thomas" },
-      E: { text: "thomas" },
-      F: { text: "thomas" },
-    },
-    selection: {
-      airport1: { text: "airport 1" },
-      airport2: { text: "no" },
-      airport3: { text: "no" },
-    },
-    selection2: ["optie1", "optie2", "hello"],
+    
+    select1: '',
+    select2: '',
+    select3: '',
+    
+    selectionDeparture: ["optie1", "optie2", "hello"],
+    selectionArrival: ["select1", "optie2", "hello"],
+    selectionTussen: ["select1", "optie2", "hello"],
+    selectionResult: []
   }),
   methods: {
-    selectedAirport1: function (textselection) {
-      this.selection.airport1.text = textselection;
-    },
+    sendAerodromes: function(){
+      this.selectionResult.push(this.select1);
+      this.selectionResult.push(this.select1);
+      this.selectionResult.push(this.select1);
+
+    }
   },
+  
   created() {
     this.$vuetify.theme.dark = true;
   },
