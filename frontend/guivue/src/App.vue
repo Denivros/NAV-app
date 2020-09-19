@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import {db} from "./scripts/index.js";
+import {adObjectList,wptObjectList} from "./scripts/index.js";
 
 export default {
   props: {
@@ -109,54 +109,20 @@ export default {
 
     },
     getAerodromes: function(){
-      const dbRefObject = db.ref().child('Aerodromes');
-      var ad_name = [];
-      var icao = [];
-      var iata = [];
-      var coor = [];
-      var elev = [];
-      var type = [];
-      var country = [];
-      var data2 = [];
-      dbRefObject.on('value',snap => {
-        var data = snap.val()
-        for (var i in data){
-          data2 = data[i];
-          ad_name.push(data2.name);
-          icao.push(data2.icao);
-          iata.push(data2.iata);
-          elev.push(data2.elevation);
-          country.push(data2.country);
-          type.push(data2.type);
-          coor.push(data2.coor);
-          }
-        // console.log(icao)
-        this.selectionDeparture = icao;
-        this.selectionArrival = icao;
-        this.selectionAlternate = icao;
-      });
+      var adIcaoList = []
+      for (var i in adObjectList){
+        adIcaoList.push(adObjectList[i].icao)
+      }
+        this.selectionDeparture = adIcaoList;
+        this.selectionArrival = adIcaoList;
+        this.selectionAlternate = adIcaoList;
     },
     getWaypoints: function(){
-      const dbRefObject = db.ref().child('Waypoints');
-      var name = [];
-      var to_ad_icao = [];
-      var coor = [];
-      var country = [];
-      var data2 = [];
-
-      dbRefObject.on('value',snap => {
-        var data = snap.val()
-        for (var i in data){
-          data2 = data[i];
-          name.push(data2.name);
-          to_ad_icao.push(data2.to_ad_icao);
-          country.push(data2.country);
-          coor.push(data2.coor);
-          }
-        console.log(name)
-        //this.selectionWaypoints = name;
-
-      });
+      var wptNamesList = []
+      for (var i in wptObjectList){
+        wptNamesList.push(wptObjectList[i].name)
+      }
+      console.log('wptnameslist vue',wptNamesList);
     }    
   },
   

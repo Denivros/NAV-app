@@ -1,5 +1,6 @@
- import firebase from "firebase/app";
- import "firebase/database";
+import firebase from "firebase/app";
+import "firebase/database";
+import {Waypoint,Aerodrome} from '../../../../backend/Classes.js'
 
 var config = {
   apiKey: "AIzaSyAEt3og515ZuYlivFWjrY00_rsgFLdXCuA",
@@ -15,57 +16,58 @@ var config = {
 const fire = firebase.initializeApp(config);
 export const db = fire.database();
 
+export var adObjectList = []
+export var wptObjectList = []
 
-// const preObject = document.getElementById('objects');
-// const ulList = document.getElementById('list');
-// // Get a reference to the database service
-// const dbRefObject = firebase.database().ref().child('Aerodromes');
-// const dbRefList = dbRefObject.child('Aerodromes');
+const dbRefObject = db.ref().child('Aerodromes');
+var ad_name = [];
+var ad_icao = [];
+var ad_iata = [];
+var ad_coor = [];
+var ad_elev = [];
+var ad_type = [];
+var ad_country = [];
+var data2 = [];
+dbRefObject.on('value',snap => {
+  var data = snap.val()
+  for (var i in data){
+    data2 = data[i];
+    ad_name.push(data2.name);
+    ad_icao.push(data2.icao);
+    ad_iata.push(data2.iata);
+    ad_elev.push(data2.elevation);
+    ad_country.push(data2.country);
+    ad_type.push(data2.type);
+    ad_coor.push(data2.coor);
 
+    var ad = new Aerodrome(data2.name,data2.coor,data2.icao,data2.country,data2.elevation,data2.iata,data2.type);
+    adObjectList.push(ad);
+    
+    }
+    console.log('adobj',adObjectList)
+  // console.log(icao)
+});
+const dbRefObject_wpt = db.ref().child('Waypoints');
+var wpt_name = [];
+var wpt_to_ad_icao = [];
+var wpt_coor = [];
+var wpt_country = [];
+data2 = [];
 
-// var ad_name = [];
-// var icao = [];
-// var iata = [];
-// var coor = [];
-// var elev = [];
-// var type = [];
-// var country = [];
-// var data2 = [];
+dbRefObject_wpt.on('value',snap => {
+  var data = snap.val()
+  for (var i in data){
+    data2 = data[i];
+    wpt_name.push(data2.name);
+    wpt_to_ad_icao.push(data2.to_ad_icao);
+    wpt_country.push(data2.country);
+    wpt_coor.push(data2.coor);
+    var wpt = new Waypoint(data2.name,data2.coor,data2.country,data2.to_ad_icao);
+    wptObjectList.push(wpt);
+    }
+  // console.log(wpt_name)
+  // console.log('data',data)
+  // console.log('wpt name',wpt_name)
+  //this.selectionWaypoints = name;
 
-// dbRefObject.on('value', snap => {
-//     preObject.innerText = JSON.stringify(snap.val(),null,3);
-//     var data = snap.val();
-//     // console.log('aaaaa',data);
-
-
-//     for (var i in data){
-//       data2 = data[i];
-//       ad_name.push(data2.name);
-//       icao.push(data2.icao)
-//       iata.push(data2.iata)
-//       elev.push(data2.elevation)
-//       country.push(data2.country)
-//       type.push(data2.type)
-//       coor.push(data2.coor)
-//     }
-//     // console.log('ad',ad_name);
-//     // console.log('coor',coor);
-
-// });
-
-// dbRefList.on('child_added', snap => {
-//     const li = document.createElement('li');
-//     li.innerText = snap.val();
-//     li.id = snap.key;
-//     ulList.appendChild(li);
-// }); // checkt als er iets bijkomt in de aerodromes lijst op firebase db
-// dbRefList.on('child_changed',snap => {
-//   const liChanged = document.getElementById(snap.key);
-//   liChanged.innerText = snap.val();
-// });
-// dbRefList.on('child_removed',snap => {
-//   const liToRemove = document.getElementById(snap.key);
-//   liToRemove.remove();
-// });
-
-// export default icao;
+});

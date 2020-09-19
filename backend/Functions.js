@@ -1,4 +1,4 @@
-import Waypoint from './Classes.js'
+import {Waypoint,Aerodrome} from './Classes.js'
 import turf from '@turf/turf'
 
 function distance_nm(wpt1,wpt2) {

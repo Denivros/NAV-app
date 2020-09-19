@@ -1,8 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "firebase": "^7.21.0",
-    "@turf/turf": "^5.1.6"
-    
-  }
-}

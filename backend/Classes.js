@@ -1,8 +1,12 @@
-export default class Aerodrome {
-    constructor(name, coordinate,icao) {
+export class Aerodrome {
+    constructor(name, coordinate,icao,country,elev,iata,type) {
       this.name = name;
       this.coordinate = coordinate;
       this.icao = icao;
+      this.country = country;
+      this.elev = elev;
+      this.iata = iata;
+      this.type = type;
     }
     get decimal_lat (){
         return this.Calc_decimal_lat();
@@ -39,10 +43,12 @@ export default class Aerodrome {
     }
   }
 
-export default class Waypoint {
-    constructor(name, coordinate) {
+export class Waypoint {
+    constructor(name, coordinate,country,to_ad_icao) {
       this.name = name;
       this.coordinate = coordinate;
+      this.country = country;
+      this.to_ad_icao = to_ad_icao;
     }
     get decimal_lat (){
         return this.Calc_decimal_lat();
@@ -79,9 +85,9 @@ export default class Waypoint {
     }
   }
 
-var coordinate = "505900N0034000E"
+// var coordinate = "505900N0034000E"
 //console.log(coordinate.substring(0,2));
-var AD = new Aerodrome("Antwerpen Airport",coordinate,"EBAW");
+// var AD = new Aerodrome("Antwerpen Airport",coordinate,"EBAW");
 //console.log(AD.decimal_long)
 //console.log(AD.gps_coor)
 
