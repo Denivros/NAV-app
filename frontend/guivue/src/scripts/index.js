@@ -1,7 +1,7 @@
 import firebase from "/guivue/node_modules/firebase";
 import "firebase/firestore";
 
-var fire = firebase.initializeApp({
+firebase.initializeApp({
   apiKey: "AIzaSyAEt3og515ZuYlivFWjrY00_rsgFLdXCuA",
   authDomain: "nav-one-b8410.firebaseapp.com",
   databaseURL: "https://nav-one-b8410.firebaseio.com",
@@ -33,11 +33,11 @@ var data2 = [];
 
 dbRefObject.on('value', snap => {
     preObject.innerText = JSON.stringify(snap.val(),null,3);
-    data = snap.val();
+    var data = snap.val();
     console.log('aaaaa',data);
 
 
-    for (i in data){
+    for (var i in data){
       data2 = data[i];
       ad_name.push(data2.name);
       icao.push(data2.icao)

@@ -83,7 +83,7 @@
 </template>
 
 <script>
-// import fire from "./scripts/index.js";
+ import icao from "./scripts/index.js";
 
 export default {
   props: {
@@ -96,7 +96,7 @@ export default {
     select2: '',
     select3: '',
     
-    selectionDeparture: ["optie1", "optie2", "hello"],
+    selectionDeparture: icao,
     selectionArrival: ["select1", "optie2", "hello"],
     selectionTussen: ["select1", "optie2", "hello"],
     selectionResult: []
