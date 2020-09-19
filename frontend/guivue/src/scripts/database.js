@@ -69,7 +69,7 @@ dbRefList.on('child_removed',snap => {
 });
 
 
-export default function get_Array (name){
+function get_Array (name){
   if (name == 'icao'){
     console.log('icao',icao)
     return icao
