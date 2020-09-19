@@ -1,7 +1,8 @@
 class Aerodrome {
-    constructor(name, coordinate) {
+    constructor(name, coordinate,icao) {
       this.name = name;
       this.coordinate = coordinate;
+      this.icao = icao;
     }
     get decimal_lat (){
         return this.Calc_decimal_lat();
@@ -80,7 +81,7 @@ export default class Waypoint {
 
 var coordinate = "505900N0034000E"
 //console.log(coordinate.substring(0,2));
-var AD = new Aerodrome("EBAW",coordinate);
+var AD = new Aerodrome("Antwerpen Airport",coordinate,"EBAW");
 //console.log(AD.decimal_long)
 //console.log(AD.gps_coor)
 
