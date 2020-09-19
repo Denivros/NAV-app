@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import {db} from "..\backend\index.js";
+import {db} from "./scripts/index.js";
 
 export default {
   props: {
