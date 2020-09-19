@@ -70,7 +70,9 @@
           </v-col>
 
         </v-row>
-        <v-row></v-row>
+        <v-row>
+          <v-select  :items="selectionResult" label="Tussen" dense outlined></v-select>
+        </v-row>
       </v-container>
     </v-main>
     <!-- dees is de footer van de applicatie -->
@@ -102,8 +104,11 @@ export default {
   methods: {
     sendAerodromes: function(){
       this.selectionResult.push(this.select1);
-      this.selectionResult.push(this.select1);
-      this.selectionResult.push(this.select1);
+      this.selectionResult.push(this.select2);
+      this.selectionResult.push(this.select3);
+
+    },
+    newmethod: function(){
 
     }
   },
