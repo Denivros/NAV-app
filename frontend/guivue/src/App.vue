@@ -73,7 +73,7 @@ export default {
     selection: {
       airport1: { text: "airport 1" },
       airport2: { text: "no" },
-      airport3: { text: "yes" },
+      airport3: { text: "no" },
     },
     selection2: ["optie1", "optie2", "hello"],
   }),
