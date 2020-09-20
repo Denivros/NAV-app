@@ -10,6 +10,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^7.21.0"
-  }
+    "firebase": "^7.21.0",
+    "@turf/turf": "^5.1.6"
+  },
+  "eslintConfig": { 
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "plugin:vue/essential",
+        "eslint:recommended"
+    ],
+    "rules": { 
+        "no-unused-vars": "off" 
+    }
+}
 }

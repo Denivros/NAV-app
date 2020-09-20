@@ -84,6 +84,8 @@
 
 <script>
 import {db} from "./scripts/index.js";
+import calcRoute from "./scripts/main.js"
+
 
 export default {
   props: {
@@ -106,7 +108,8 @@ export default {
       this.selectionResult.push(this.select1);
       this.selectionResult.push(this.select2);
       this.selectionResult.push(this.select3);
-
+      var route = calcRoute(this.select1,this.select2,this.select3,['ALBER','KONTI','TANGO']);
+      console.log(route)
     },
     getsetAerodromes: function(db){
       const dbRefObject = db.ref().child('Aerodromes');
@@ -159,6 +162,7 @@ export default {
   created() {
     this.$vuetify.theme.dark = true;
     this.getsetAerodromes(db);
+    
   }
 };
 </script>

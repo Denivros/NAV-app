@@ -12,7 +12,8 @@
     "firebase": "^7.21.0",
     "vue": "^2.6.11",
     "vuefire": "^2.2.4",
-    "vuetify": "^2.2.11"
+    "vuetify": "^2.2.11",
+    "@turf/turf": "^5.1.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -39,7 +40,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",

@@ -1,7 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import {Waypoint,Aerodrome} from './Classes.js'
 import turf from '@turf/turf'
 
-function distance_nm(wpt1,wpt2) {
+export function distance_nm(wpt1,wpt2) {
 	if ((wpt1.decimal_lat == wpt2.decimal_lat) && (wpt1.decimal_long == wpt2.decimal_long)) {
 		return 0;
 	}
@@ -19,7 +20,7 @@ function distance_nm(wpt1,wpt2) {
 	}
 }
 
-function bearing(wpt1,wpt2) {
+export function bearing(wpt1,wpt2) {
 	if ((wpt1.decimal_lat == wpt2.decimal_lat) && (wpt1.decimal_long == wpt2.decimal_long)) {
 		return 0;
 	}
@@ -96,7 +97,7 @@ function radians_to_degrees(radians)
   return radians * (180/pi);
 }
 
-function wind_triangle(tas,wind,course) {
+export function wind_triangle(tas,wind,course) {
     var hwc = hwc_xwc(course,wind)[0];
     var xwc = hwc_xwc(course,wind)[1];
     var wind_dir = 0;
