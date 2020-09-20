@@ -1,5 +1,5 @@
 import {Waypoint} from './Classes.js'
-import { adObjectList,wptObjectList } from "./index.js";
+import {adObjectList,wptObjectList} from "./index.js";
 import {distance_nm} from "./Functions.js";
 
 // var route = ['TANGO','RUPEL','KONTI']
@@ -17,11 +17,10 @@ export default function calcRoute(ad_dep,ad_arr,ad_altn,route){
     getRoute(ad_dep,ad_arr,ad_altn,route)
     var wpt1 = []
     var wpt2 = []
-    var dist = 0
     for (var i = 0; i < route_obj.length; i++){
         wpt1 = new Waypoint(route_obj[i].name, route_obj[i].coordinate,route_obj[i].country,route_obj[i].to_ad_icao)
         wpt2 = new Waypoint(route_obj[i+1].name, route_obj[i+1].coordinate,route_obj[i+1].country,route_obj[i+1].to_ad_icao)
-        dist = distance_nm(wpt1,wpt2)
+        var dist = distance_nm(wpt1,wpt2)
     }
     console.log(wpt1)
     console.log(dist)
