@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import {adObjectList,wptObjectList} from "./scripts/index.js";
+import {db} from "./scripts/index.js";
 
 export default {
   props: {
@@ -108,29 +108,58 @@ export default {
       this.selectionResult.push(this.select3);
 
     },
-    getAerodromes: function(){
-      var adIcaoList = []
-      for (var i in adObjectList){
-        adIcaoList.push(adObjectList[i].icao)
-      }
-        this.selectionDeparture = adIcaoList;
-        this.selectionArrival = adIcaoList;
-        this.selectionAlternate = adIcaoList;
+    getsetAerodromes: function(db){
+      const dbRefObject = db.ref().child('Aerodromes');
+      var ad_name = [];
+      var ad_icao = [];
+      var ad_iata = [];
+      var ad_coor = [];
+      var ad_elev = [];
+      var ad_type = [];
+      var ad_country = [];
+      var data2 = [];
+      dbRefObject.on('value',snap => {
+        var data = snap.val()
+        for (var i in data){
+          data2 = data[i];
+          ad_name.push(data2.name);
+          ad_icao.push(data2.icao);
+          ad_iata.push(data2.iata);
+          ad_elev.push(data2.elevation);
+          ad_country.push(data2.country);
+          ad_type.push(data2.type);
+          ad_coor.push(data2.coor);
+          }
+        this.selectionDeparture = ad_icao
+        this.selectionArrival = ad_icao
+        this.selectionAlternate = ad_icao
+      });
     },
-    getWaypoints: function(){
-      var wptNamesList = []
-      for (var i in wptObjectList){
-        wptNamesList.push(wptObjectList[i].name)
-      }
-      console.log('wptnameslist vue',wptNamesList);
-    }    
+    getsetWaypoints: function(db){
+    const dbRefObject_wpt = db.ref().child('Waypoints');
+    var wpt_name = [];
+    var wpt_to_ad_icao = [];
+    var wpt_coor = [];
+    var wpt_country = [];
+    var data2 = [];
+    dbRefObject_wpt.on('value',snap => {
+      var data = snap.val()
+      for (var i in data){
+        data2 = data[i];
+        wpt_name.push(data2.name);
+        wpt_to_ad_icao.push(data2.to_ad_icao);
+        wpt_country.push(data2.country);
+        wpt_coor.push(data2.coor);
+        }
+
+      return [wpt_name,wpt_coor,wpt_country,wpt_to_ad_icao]
+      });
+    }
   },
-  
   created() {
     this.$vuetify.theme.dark = true;
-    this.getAerodromes();
-    this.getWaypoints();
-  },
+    this.getsetAerodromes(db);
+  }
 };
 </script>
 
